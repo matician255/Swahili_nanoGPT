@@ -2,8 +2,7 @@
 **The simplest, fastest way to train Swahili language models**  
 *Empowering East Africa's digital future with accessible AI technology*
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/swahili-nanoGPT)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ![alt text](img/img01.png)
 
@@ -24,6 +23,10 @@ Swahili is spoken by **200+ million people** across East Africa, yet remains und
 - 📈 Build educational/health tools for low-bandwidth regions
 - 🔍 Preserve linguistic nuance through lightweight models
 - 💡 Enable research on African languages
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/swahili-nanoGPT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 Contacts
 Emily Godfrey Emily | mathematiciangodfrey@outlook.com
