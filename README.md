@@ -5,7 +5,10 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/swahili-nanoGPT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Currently this is a character level language model trained in a GPT-2 model with 10M parameters, with swahili dataset from OSCAR corpus containing 8.5M characters achieving train loss 1.0362, val loss 1.0904.
+![alt text](img/img01.png)
+
+This is a Swahili language model trained in a GPT-2 model with 10M parameters, with swahili dataset from OSCAR corpus containing 8.5M characters achieving train loss 1.0362, val loss 1.0904(*These were achieved using a character level encoding, new results after byte pair encoding will be updated after training is finished*).
+Tokenization is done using swahilitiktoken a  byte pair tokenizer that is trained using pure swahili vocabularies 
 This is a work in progress so i will keep updating the features in the model
 
 > *Example output:*  

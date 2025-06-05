@@ -1,6 +1,6 @@
 from model import BigramLanguageModel
 
-
+import torch # type: ignore
 #hyperparameters setup--------------------------------
 batch_size = 64
 block_size = 256 
@@ -19,7 +19,7 @@ torch.manual_seed(1338)
 
 
 # here are the unique characters in the dataset
-chars = sorted(list(set(cleaned_swahili)))
+chars = sorted(list(set(cleaned_swahili))) # type: ignore
 vocab_size = len(chars)
 
 #create mapping from characters to intergers and viceversa
@@ -29,7 +29,7 @@ encode = lambda s: [stoi[c] for c in s] #takes string returns list intergers
 decode = lambda l: ''.join([itos[i] for i in l]) #takes list of intergers returns a string
 
 #train and test split
-data = torch.tensor(encode(cleaned_swahili), dtype=torch.long)
+data = torch.tensor(encode(cleaned_swahili), dtype=torch.long) # type: ignore
 n = int(0.9 * len(data))
 train_data = data[:n]
 val_data = data[n:]

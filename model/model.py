@@ -2,10 +2,22 @@
 This is the implementation of a GPT language model in this single file 
 """
 
-import torch 
-import torch.nn as nn
-from torch.nn import functional as F
+import torch  # type: ignore
+import torch.nn as nn # type: ignore
+from torch.nn import functional as F # type: ignore
 
+#hyperparameters setup--------------------------------
+batch_size = 64
+block_size = 256 
+n_embd = 384
+n_heads = 6
+n_layer = 6
+eval_iters = 200
+eval_interval = 100
+learning_rate = 3e-4
+max_iters = 5000
+dropout = 0.2
+vocab_size = len(chars) # type: ignore
 
 class MultiHeadAttention(nn.Module):
   def __init__(self, num_heads, head_size):
@@ -90,7 +102,7 @@ class BigramLanguageModel(nn.Module):
 
         # idx and targets are both (B,T) tensor of integers
         tok_emb = self.token_embedding_table(idx) # (B,T,C)
-        pos_emb = self.position_embedding_table(torch.arange(T, device=device)) # (T,C)
+        pos_emb = self.position_embedding_table(torch.arange(T, device=device)) # type: ignore # (T,C)
         x = tok_emb + pos_emb # (B,T,C)
         x = self.blocks(x) # (B,T,C)
         x = self.ln_f(x) # (B,T,C)
